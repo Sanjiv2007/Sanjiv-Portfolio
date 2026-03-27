@@ -4,7 +4,7 @@
 
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
+  grid-template-columns: 1.5fr 1fr;
   gap: 5rem;
   align-items: center;
 }
@@ -32,14 +32,36 @@
   color: var(--primary);
 }
 
-.about-text-side .description {
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
+.achievements {
+  margin-bottom: 2.5rem;
+  text-align: left;
+}
+
+.achievements h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 1rem;
+}
+
+.achievements ul {
+  list-style: none;
+  padding: 0;
+}
+
+.achievements li {
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+  color: var(--text-body);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .about-stats {
   display: flex;
   gap: 3rem;
+  margin-top: 1rem;
 }
 
 .stat-item h3 {

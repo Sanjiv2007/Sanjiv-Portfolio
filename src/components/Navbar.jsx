@@ -17,10 +17,10 @@ const Navbar = () => {
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
           </div>
 
           <div className="nav-actions">
-            <a href="#contact" className="btn secondary-btn hide-mobile">Contact Me!</a>
             <div className="menu-btn" onClick={() => setIsMenuOpen(!isMenuOpen)}>
               <div className={`menu-btn-burger ${isMenuOpen ? 'open' : ''}`}></div>
             </div>

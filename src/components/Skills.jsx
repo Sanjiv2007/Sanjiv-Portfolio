@@ -4,19 +4,53 @@ import './Skills.css';
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Frontend",
-      skills: ["React", "TypeScript", "Next.js", "Tailwind"],
-      icon: "🎨"
+      title: "Programming Languages",
+      icon: "💻",
+      type: "progress",
+      skills: [
+        { name: "Python (Advanced: Pandas, NumPy, XGBoost, CNN)", level: "95%" },
+        { name: "Java", level: "85%" },
+        { name: "C / C++", level: "80%" },
+        { name: "SQL", level: "85%" },
+        { name: "HTML / CSS", level: "90%" },
+        { name: "JavaScript", level: "88%" },
+        { name: "Go", level: "75%" }
+      ]
     },
     {
-      title: "Backend",
-      skills: ["Node.js", "Python", "Go", "PostgreSQL"],
-      icon: "⚙️"
+      title: "ML / Data Science",
+      icon: "🤖",
+      type: "progress",
+      skills: [
+        { name: "Model Development (XGBoost, Time Series)", level: "90%" },
+        { name: "Data Preprocessing", level: "92%" },
+        { name: "Colab Experiments", level: "85%" },
+        { name: "MongoDB", level: "80%" }
+      ]
     },
     {
-      title: "Tools",
-      skills: ["Git", "Docker", "AWS", "Figma"],
-      icon: "🛠️"
+      title: "Tools & Technologies",
+      icon: "🛠️",
+      type: "tags",
+      skills: ["Jupyter Notebook", "VS Code", "Google Colab", "Figma", "MIT App Inventor", "Zerodha API Integration", "Selenium", "UnitTest", "Embedded Systems/IoT", "Database Optimization"]
+    },
+    {
+      title: "Soft Skills",
+      icon: "🧠",
+      type: "tags",
+      skills: ["Problem Solving", "Critical Thinking", "Communication", "Teamwork", "Organizational"]
+    },
+    {
+      title: "Language Skills",
+      icon: "🌐",
+      type: "progress",
+      skills: [
+        { name: "English (Fluent)", level: "100%" },
+        { name: "Tamil (Fluent)", level: "100%" },
+        { name: "French (Exam Level)", level: "70%" },
+        { name: "Hindi (Learning)", level: "40%" },
+        { name: "German (Learning)", level: "30%" }
+      ]
     }
   ];
 
@@ -24,7 +58,7 @@ const Skills = () => {
     <section id="skills" className="skills">
       <div className="container">
         <div className="section-title reveal">
-          <h2>My Skills</h2>
+          <h2>Technical & Professional Skills</h2>
           <div className="underline"></div>
         </div>
 
@@ -35,16 +69,28 @@ const Skills = () => {
                 <span className="skill-icon">{category.icon}</span>
                 <h3>{category.title}</h3>
               </div>
-              <div className="skill-list">
-                {category.skills.map((skill, i) => (
-                  <div key={i} className="skill-item">
-                    <span className="skill-name">{skill}</span>
-                    <div className="progress-bar">
-                      <div className="progress" style={{width: '85%'}}></div>
+              
+              {category.type === "progress" ? (
+                <div className="skill-list">
+                  {category.skills.map((skill, i) => (
+                    <div key={i} className="skill-item">
+                      <div className="skill-info">
+                        <span className="skill-name">{skill.name}</span>
+                        <span className="skill-level">{skill.level}</span>
+                      </div>
+                      <div className="progress-bar">
+                        <div className="progress" style={{ width: skill.level }}></div>
+                      </div>
                     </div>
-                  </div>
-                ))}
-              </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="skill-tags">
+                  {category.skills.map((skill, i) => (
+                    <span key={i} className="skill-tag">{skill}</span>
+                  ))}
+                </div>
+              )}
             </div>
           ))}
         </div>

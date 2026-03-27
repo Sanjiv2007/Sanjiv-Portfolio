@@ -7,22 +7,18 @@ import project3 from '../assets/images/project3.png';
 const Projects = () => {
   const projects = [
     {
-      title: "Enterprise SaaS",
-      tag: "Web App",
+      title: "Interactive Emergency Management System",
+      tag: "HTML, CSS, JavaScript",
       image: project1,
-      desc: "Cloud-native enterprise management platform with advanced analytics."
+      desc: "Browser-based emergency simulation (60 FPS) with pure JS incidents, hybrid dispatch, map UI, and voice controls. Zero-dependency web app featuring offline storage and escalation mechanics.",
+      link: "https://github.com/ambalavanan01/crisis-response-command-center"
     },
     {
-      title: "Mobile Fintech",
-      tag: "Mobile",
-      image: project3,
-      desc: "Next-gen banking application with crypto integration and secure pay."
-    },
-    {
-      title: "Dev Productivity",
-      tag: "Desktop",
+      title: "Leakage Prediction in HVAC Systems",
+      tag: "Machine Learning, Python",
       image: project2,
-      desc: "Unified workspace tool for engineering teams to manage workflows."
+      desc: "Comprehensive ML solution using ensemble methods (RandomForest, VotingClassifier, GradientBoosting) to detect and quantify leaks across diverse HVAC configurations.",
+      link: "#"
     }
   ];
 
@@ -45,7 +41,7 @@ const Projects = () => {
                 <h3>{project.title}</h3>
                 <p>{project.desc}</p>
                 <div className="project-footer">
-                  <a href="#" className="btn-link">View Project →</a>
+                  <a href={project.link} className="btn-link" target="_blank" rel="noopener noreferrer">View Project →</a>
                 </div>
               </div>
             </div>
