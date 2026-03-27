@@ -83,7 +83,7 @@ npm run build
 
 ## 📬 Contact
 Feel free to reach out for collaborations or inquiries!
-- **Website**: [sanjivkrishna.dev](https://sanjivkrishna.dev/)
+- **Website**: [sanjivkrishna.vercel.app](https://sanjivkrishna.vercel.app/)
 - **LinkedIn**: [Sanjiv Krishna](https://www.linkedin.com/in/sanjiv-krishna-4b317531b/)
 - **GitHub**: [Sanjiv2007](https://github.com/Sanjiv2007)
 
