@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   z-index: 1000;
 }
 
@@ -27,28 +27,21 @@
   font-weight: 700;
   letter-spacing: -0.03em;
   color: var(--text-main);
-  position: relative;
-  z-index: 1010;
 }
 
 .logo span {
   color: var(--primary);
 }
 
-/* Desktop: nav-links shown inline, positioned in the navbar area */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
 .nav-links {
   display: flex;
   gap: 2rem;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: auto;
-  padding: 1.2rem 10%;
-  justify-content: center;
-  align-items: center;
-  pointer-events: none;
-  z-index: 1001;
 }
 
 .nav-links a {
@@ -57,7 +50,6 @@
   color: var(--text-body);
   letter-spacing: 0.01em;
   opacity: 0.8;
-  pointer-events: auto;
 }
 
 .nav-links a:hover {
@@ -105,7 +97,7 @@
   transform: translateY(8px);
 }
 
-/* Animation */
+/* Hamburger Animation */
 .menu-btn-burger.open {
   transform: translateX(-50px);
   background: transparent;
@@ -122,6 +114,11 @@
 @media (max-width: 768px) {
   .navbar {
     padding: 1rem 5% !important;
+    overflow: visible !important;
+  }
+
+  .nav-right {
+    position: relative;
   }
 
   .menu-btn {
@@ -132,20 +129,20 @@
 
   .nav-links {
     position: absolute;
-    top: 100%;
-    left: 5%;
-    right: 5%;
+    top: calc(100% + 12px);
+    right: 0;
+    left: auto;
+    min-width: 200px;
     width: auto;
     height: auto;
     background: #FFFFFF;
-    display: flex;
     flex-direction: column;
     align-items: stretch;
     padding: 0.5rem 0;
     gap: 0;
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-10px);
+    transform: translateY(-8px);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1001;
     pointer-events: none;
@@ -165,7 +162,7 @@
     font-size: 0.95rem;
     font-weight: 600;
     color: var(--text-main);
-    pointer-events: auto;
+    opacity: 1;
     padding: 0.85rem 1.5rem;
     transition: background 0.2s ease;
   }

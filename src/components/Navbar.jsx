@@ -10,20 +10,22 @@ const Navbar = () => {
         <div className="logo">
           Sanjiv<span>.</span>
         </div>
-        
-        <div className="nav-actions">
-          <div className="menu-btn" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            <div className={`menu-btn-burger ${isMenuOpen ? 'open' : ''}`}></div>
+
+        <div className="nav-right">
+          <div className={`nav-links ${isMenuOpen ? 'active' : ''}`} onClick={() => setIsMenuOpen(false)}>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+          </div>
+
+          <div className="nav-actions">
+            <div className="menu-btn" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              <div className={`menu-btn-burger ${isMenuOpen ? 'open' : ''}`}></div>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div className={`nav-links ${isMenuOpen ? 'active' : ''}`} onClick={() => setIsMenuOpen(false)}>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
       </div>
     </nav>
   );
