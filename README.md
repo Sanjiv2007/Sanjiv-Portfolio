@@ -1,7 +1,7 @@
 # Sanjiv Krishna | Portfolio 🚀
 Welcome to my professional portfolio! This project showcases my journey as a **Machine Learning Engineer & Data Scientist**, highlighting my expertise in model development, deep learning, and data science.
 
-<img src="./public/SUU00511.JPG.jpeg" alt="Portfolio Preview" width="800" height="450" />
+<img src="./public/SUU00511.JPG.jpeg" alt="Portfolio Preview" width="450" height="450" align="center" />
 
 ---
 
