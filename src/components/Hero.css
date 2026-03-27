@@ -119,10 +119,21 @@
   .hero-container {
     grid-template-columns: 1fr;
     text-align: center;
+    gap: 3rem;
+  }
+  
+  .hero-content {
+    order: 2;
+  }
+
+  .hero-image-container {
+    order: 1;
+    max-width: 300px;
+    margin: 0 auto;
   }
   
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
   .hero-subtitle {
@@ -131,9 +142,5 @@
 
   .hero-actions {
     justify-content: center;
-  }
-
-  .image-frame {
-    max-width: 350px;
   }
 }

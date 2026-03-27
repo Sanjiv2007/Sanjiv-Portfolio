@@ -8,11 +8,11 @@ const Navbar = () => {
     <nav className="navbar-wrapper">
       <div className="navbar glass-card">
         <div className="logo">
-          SK<span>.</span>
+          Sanjiv<span>.</span>
         </div>
         
         <div className="nav-right">
-          <div className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
+          <div className={`nav-links ${isMenuOpen ? 'active' : ''}`} onClick={() => setIsMenuOpen(false)}>
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#skills">Skills</a>

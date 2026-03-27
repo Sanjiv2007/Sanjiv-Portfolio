@@ -135,17 +135,22 @@
   .about-grid {
     grid-template-columns: 1fr;
     text-align: center;
-    gap: 3rem;
+    gap: 4rem;
   }
   
+  .about-text-side {
+    order: 2;
+  }
+
   .about-image-side {
-    max-width: 400px;
+    order: 1;
+    max-width: 350px;
     margin: 0 auto;
   }
 
   .about-stats {
-    justify-content: center;
-    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
 
   .section-title {
