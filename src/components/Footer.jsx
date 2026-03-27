@@ -7,8 +7,8 @@ const Footer = () => {
       <div className="container">
         <div className="footer-top">
           <div className="footer-branding">
-            <div className="logo">SK<span>.</span></div>
-            <p>Passionate developer creating modern solutions.</p>
+            <div className="logo">Sanjiv<span>.</span></div>
+            <p>Machine Learning Engineer & Data Scientist building intelligent digital experiences.</p>
           </div>
           <div className="footer-links">
             <a href="#home">Home</a>

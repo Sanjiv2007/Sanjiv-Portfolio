@@ -1,12 +1,12 @@
 .projects {
-  background: whitesmoke;
+  background: var(--bg-main);
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 3rem;
-  margin-top: 3rem;
+  margin-top: 4rem;
 }
 
 .project-card {
@@ -17,7 +17,7 @@
 .project-image {
   position: relative;
   width: 100%;
-  height: 240px;
+  aspect-ratio: 16 / 10;
   overflow: hidden;
 }
 
@@ -25,7 +25,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.6s ease;
 }
 
 .project-card:hover .project-image img {
@@ -35,40 +35,48 @@
 .project-tag {
   position: absolute;
   top: 1.5rem;
-  left: 1.5rem;
-  background: var(--primary);
-  color: white;
-  padding: 0.4rem 1.2rem;
-  border-radius: 9999px;
+  right: 1.5rem;
+  background: white;
+  color: var(--primary);
+  padding: 0.5rem 1.2rem;
+  border-radius: 999px;
   font-size: 0.75rem;
   font-weight: 700;
   z-index: 3;
+  box-shadow: var(--shadow-md);
+  opacity: 0.95;
 }
 
 .project-body {
-  padding: 2.5rem;
+  padding: 3rem;
 }
 
 .project-body h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.75rem;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
 }
 
 .project-body p {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: var(--text-body);
-  margin-bottom: 2rem;
-  line-height: 1.5;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
 }
 
 .btn-link {
   font-weight: 700;
   color: var(--primary);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .btn-link:hover {
-  text-decoration: underline;
+  gap: 0.8rem;
 }
 
 @media (max-width: 480px) {

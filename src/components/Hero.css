@@ -1,15 +1,18 @@
 .hero {
-  min-height: 90vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-top: 140px;
-  background: whitesmoke;
+  padding-top: 100px;
+  background: radial-gradient(circle at 0% 0%, rgba(37, 99, 235, 0.05) 0%, transparent 50%),
+              radial-gradient(circle at 100% 100%, rgba(99, 102, 241, 0.05) 0%, transparent 50%);
+  position: relative;
+  overflow: hidden;
 }
 
 .hero-container {
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 5rem;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 6rem;
   align-items: center;
 }
 
@@ -25,10 +28,12 @@
 }
 
 .hero-title {
-  font-size: 3.5rem;
-  line-height: 1.1;
-  margin-bottom: 1.5rem;
+  font-size: 4.5rem;
+  line-height: 1;
+  margin-bottom: 2rem;
   color: var(--text-main);
+  font-weight: 900;
+  letter-spacing: -0.04em;
 }
 
 .highlight {
@@ -36,10 +41,11 @@
 }
 
 .hero-subtitle {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   color: var(--text-body);
-  margin-bottom: 2.5rem;
-  max-width: 550px;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  line-height: 1.6;
 }
 
 .hero-actions {
@@ -74,30 +80,39 @@
 .image-frame {
   position: relative;
   width: 100%;
-  max-width: 450px;
-  aspect-ratio: 0.9;
+  max-width: 500px;
+  aspect-ratio: 1;
+  padding: 20px;
 }
 
 .image-frame img {
   width: 100%;
-  height: 90%;
+  height: 100%;
   object-fit: cover;
   border-radius: var(--radius-3xl);
   position: relative;
   z-index: 2;
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-xl);
+  border: 8px solid white;
 }
 
 .decorative-element.blob {
   position: absolute;
-  top: -20px;
-  right: -20px;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background: var(--primary);
+  background: linear-gradient(135deg, var(--primary) 0%, #818CF8 100%);
   opacity: 0.1;
-  border-radius: var(--radius-3xl);
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
   z-index: 1;
+  animation: morph 8s ease-in-out infinite;
+}
+
+@keyframes morph {
+  0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+  50% { border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%; }
+  100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
 }
 
 @media (max-width: 968px) {

@@ -1,17 +1,18 @@
 .contact {
-  background: var(--bg-main);
+  background: white;
 }
 
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 5rem;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 6rem;
 }
 
 .contact-text .lead {
-  font-size: 1.25rem;
-  margin-bottom: 3rem;
+  font-size: 1.2rem;
+  margin-bottom: 3.5rem;
   color: var(--text-body);
+  line-height: 1.6;
 }
 
 .contact-item {
@@ -21,15 +22,16 @@
 }
 
 .contact-item .icon {
-  width: 50px;
-  height: 50px;
-  background: white;
+  width: 56px;
+  height: 56px;
+  background: var(--bg-main);
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 1rem;
+  border-radius: 1.2rem;
   box-shadow: var(--shadow-sm);
   font-size: 1.25rem;
+  border: 1px solid var(--border-light);
 }
 
 .contact-item h4 {
@@ -59,6 +61,7 @@
 }
 
 .contact-form {
+  padding: 4rem !important;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -72,19 +75,20 @@
 
 .contact-form input, .contact-form textarea {
   width: 100%;
-  padding: 1.2rem;
+  padding: 1.25rem;
   border: 1px solid var(--border-light);
-  background: #F8FAFC;
-  border-radius: 1rem;
+  background: var(--bg-main);
+  border-radius: 1.25rem;
   outline: none;
   font-family: inherit;
   transition: var(--transition);
+  font-size: 0.95rem;
 }
 
 .contact-form input:focus, .contact-form textarea:focus {
   border-color: var(--primary);
   background: white;
-  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.05);
+  box-shadow: 0 0 0 5px var(--primary-light);
 }
 
 .w-full {

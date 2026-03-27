@@ -34,14 +34,16 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div key={index} className="project-card glass-card reveal">
               <div className="project-image">
-                <img src={project.image} alt={project.title} />
                 <span className="project-tag">{project.tag}</span>
+                <img src={project.image} alt={project.title} />
               </div>
               <div className="project-body">
                 <h3>{project.title}</h3>
                 <p>{project.desc}</p>
                 <div className="project-footer">
-                  <a href={project.link} className="btn-link" target="_blank" rel="noopener noreferrer">View Project →</a>
+                  <a href={project.link} className="btn-link" target="_blank" rel="noopener noreferrer">
+                    View Project <span className="arrow">→</span>
+                  </a>
                 </div>
               </div>
             </div>

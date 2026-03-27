@@ -70,27 +70,13 @@ const Skills = () => {
                 <h3>{category.title}</h3>
               </div>
               
-              {category.type === "progress" ? (
-                <div className="skill-list">
-                  {category.skills.map((skill, i) => (
-                    <div key={i} className="skill-item">
-                      <div className="skill-info">
-                        <span className="skill-name">{skill.name}</span>
-                        <span className="skill-level">{skill.level}</span>
-                      </div>
-                      <div className="progress-bar">
-                        <div className="progress" style={{ width: skill.level }}></div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              ) : (
-                <div className="skill-tags">
-                  {category.skills.map((skill, i) => (
-                    <span key={i} className="skill-tag">{skill}</span>
-                  ))}
-                </div>
-              )}
+              <div className="skill-tags">
+                {category.skills.map((skill, i) => (
+                  <span key={i} className="skill-tag">
+                    {typeof skill === 'string' ? skill : skill.name}
+                  </span>
+                ))}
+              </div>
             </div>
           ))}
         </div>
