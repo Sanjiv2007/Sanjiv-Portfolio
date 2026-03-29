@@ -1,8 +1,7 @@
 # Sanjiv Krishna | Portfolio 🚀
-
 Welcome to my professional portfolio! This project showcases my journey as a **Machine Learning Engineer & Data Scientist**, highlighting my expertise in model development, deep learning, and data science.
 
-![Portfolio Preview](./public/SUU00511.JPG.jpeg) <!-- Replace with a proper screenshot if available -->
+<img src="./public/SUU00511.JPG.jpeg" alt="Portfolio Preview" width="450" height="450" align="center" />
 
 ---
 
@@ -48,17 +47,17 @@ sanjivkrishna/
 
 ### Installation
 1. Clone the repository:
-   ```bash
+```bash
    git clone https://github.com/Sanjiv2007/Sanjiv_Portfolio.git
-   ```
+```
 2. Navigate to the project directory:
-   ```bash
+```bash
    cd sanjivkrishna
-   ```
+```
 3. Install dependencies:
-   ```bash
+```bash
    npm install
-   ```
+```
 
 ### Development
 To start the development server:
@@ -83,9 +82,10 @@ npm run build
 
 ## 📬 Contact
 Feel free to reach out for collaborations or inquiries!
-- **Website**: [sanjivkrishna.dev](https://sanjivkrishna.dev/)
+- **Website**: [sanjivkrishna.vercel.app](https://sanjivkrishna.vercel.app/)
 - **LinkedIn**: [Sanjiv Krishna](https://www.linkedin.com/in/sanjiv-krishna-4b317531b/)
 - **GitHub**: [Sanjiv2007](https://github.com/Sanjiv2007)
 
 ---
+
 *Created with ❤️ by Sanjiv Krishna*
